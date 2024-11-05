@@ -1,5 +1,9 @@
 # Running the Notebook in Google Colab
 
+Quant Researcher: Ali Ghaziasgar
+MMF 2024-2025
+
+
 This guide provides step-by-step instructions on how to open and run the `code_jl.ipynb` notebook in Google Colab.
 
 ## Prerequisites
