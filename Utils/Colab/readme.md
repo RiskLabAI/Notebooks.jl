@@ -4,7 +4,7 @@ Quant Researcher: Ali Ghaziasgar
 MMF 2024-2025
 
 
-This guide provides step-by-step instructions on how to open and run the `code_jl.ipynb` notebook in Google Colab.
+This guide provides step-by-step instructions on how to open and run the a Julia notebook in Google Colab.
 
 ## Prerequisites
 1. **Google Account**: Ensure you have a Google account to access Google Colab.
