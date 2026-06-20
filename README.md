@@ -22,16 +22,19 @@ environment**, and mirrors the matching Python tutorial in
 | 6 | [`Features/FeatureImportance.ipynb`](Features/FeatureImportance.ipynb) | **Feature importance** — MDI, MDA, SFI, orthogonal (PCA) features, and weighted Kendall-τ |
 | 7 | [`Pde/DeepBSDE.ipynb`](Pde/DeepBSDE.ipynb) | **Deep-BSDE** PDE solver (Han, Jentzen & E 2018) — four financial PDEs, checked vs Monte-Carlo / closed-form references |
 
-## Running the notebooks
+## Setup
 
-The pinned environment (`Project.toml`) dev-installs the local package from a
-relative path. From this folder:
+`RiskLabAI` is pulled from its public repository — no local clone of the library
+needed. From this folder:
 
 ```julia
 using Pkg
 Pkg.activate(".")
-Pkg.instantiate()      # resolves the pinned environment (RiskLabAI.jl + deps)
+Pkg.instantiate()      # fetches RiskLabAI + deps and precompiles the env
 ```
+
+> Once `RiskLabAI.jl` is published to the General registry, the `[sources]` entry
+> in `Project.toml` can be dropped and the dep becomes a plain `Pkg.add("RiskLabAI")`.
 
 Then open any notebook with [IJulia](https://github.com/JuliaLang/IJulia.jl), or run
 it headless:
@@ -39,6 +42,10 @@ it headless:
 ```bash
 jupyter nbconvert --to notebook --execute --inplace <path-to-notebook>
 ```
+
+The Deep-BSDE PDE notebook (`Pde/DeepBSDE.ipynb`) uses the `Lux`/`Zygote`/`Optimisers`
+deep-learning stack; it arrives transitively with `RiskLabAI`, so no extra install
+step is required — only that one notebook exercises it.
 
 Tutorials 3–4 read the S&P 500 from **FRED**; set the `FRED_API_KEY` environment
 variable (a free key from <https://fred.stlouisfed.org>). All other data is either
