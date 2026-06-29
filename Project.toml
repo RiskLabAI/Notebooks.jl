@@ -11,10 +11,5 @@ Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
 RiskLabAI = "a72881da-fdaa-49c1-8962-99caf4ccfee8"
 Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
 
-# RiskLabAI is registered in General only as a placeholder (v0.0.1); the version the
-# notebooks need (0.6.0) is not yet registered. Until the maintainer registers it
-# (see PROGRESS.md, maintainer actions), pull the published package from the public
-# repo. Lux/Zygote/Optimisers are intentionally NOT direct deps here — they arrive
-# transitively through RiskLabAI and are only exercised by the Deep-BSDE PDE notebook.
 [sources]
-RiskLabAI = {url = "https://github.com/RiskLabAI/RiskLabAI.jl"}
+RiskLabAI = {path = "..\\RiskLabAI.jl"}

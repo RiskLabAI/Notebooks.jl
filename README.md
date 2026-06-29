@@ -81,6 +81,27 @@ run the notebook top-to-bottom.
 | 6 | [`Features/FeatureImportance.ipynb`](Features/FeatureImportance.ipynb) | **Feature importance** — MDI, MDA, SFI, orthogonal (PCA) features, and weighted Kendall-τ |
 | 7 | [`Pde/DeepBSDE.ipynb`](Pde/DeepBSDE.ipynb) | **Deep-BSDE** PDE solver (Han, Jentzen & E 2018) — four financial PDEs, checked vs Monte-Carlo / closed-form references |
 
+## Stage-1 method tutorials
+
+Tutorials for the admitted library-extension methods, each framed **baseline → where
+it breaks → admitted method → when to use / when NOT** (the "when to use" takeaway is
+the method's regime tag from its admitting appraisal). All run offline (synthetic data
++ the committed AAPL snapshot).
+
+| Notebook | Topic |
+|----------|-------|
+| [`Features/Microstructure_EDGE.ipynb`](Features/Microstructure_EDGE.ipynb) | **EDGE** bid-ask spread estimator (Ardia–Guidotti–Kroencke 2024) vs Roll / Corwin–Schultz |
+| [`Features/Structural Breaks/GSADF_MultipleBubbles.ipynb`](Features/Structural%20Breaks/GSADF_MultipleBubbles.ipynb) | **GSADF / BSADF** multiple-bubble detection & date-stamping (Phillips–Shi–Yu 2015) vs single-window SADF |
+| [`Features/EntropyBiasCorrection.ipynb`](Features/EntropyBiasCorrection.ipynb) | **Bias-corrected entropy** — Miller–Madow, Grassberger, NSB vs the plug-in under undersampling |
+| [`Features/DebiasedImportance_MDIplus_CPI.ipynb`](Features/DebiasedImportance_MDIplus_CPI.ipynb) | **MDI+** (Agarwal 2023) & **CPI** (Watson–Wright 2021) vs MDI/MDA |
+| [`Data/Distance/KSG_DistanceCorrelation.ipynb`](Data/Distance/KSG_DistanceCorrelation.ipynb) | **KSG** kNN mutual information & **distance correlation** vs binned MI |
+| [`Data/Diffrentation/AdaptiveFractionalDifferentiation.ipynb`](Data/Diffrentation/AdaptiveFractionalDifferentiation.ipynb) | **Adaptive Fractional Differencing** vs de Prado's min-d-via-ADF |
+| [`Backtest/MultipleTesting_and_SharpeInference.ipynb`](Backtest/MultipleTesting_and_SharpeInference.ipynb) | **Holm / BHY** Sharpe haircuts (Harvey–Liu 2015) & **LPLZ** HAC Sharpe inference (2025) |
+| [`Backtest/RobustStatistics_CED_SharpeDiff.ipynb`](Backtest/RobustStatistics_CED_SharpeDiff.ipynb) | **Conditional Expected Drawdown** & the **Ledoit–Wolf** Sharpe-difference test |
+| [`Backtest/OUTradingRules.ipynb`](Backtest/OUTradingRules.ipynb) | **Closed-form OU trading rules** (Lipton–López de Prado 2020) vs the Monte-Carlo PT/SL grid |
+| [`Validation/PathLevelCPCV.ipynb`](Validation/PathLevelCPCV.ipynb) | **Path-level Bagged & Adaptive CPCV** (Arian–Norouzi–Seco 2024) vs plain CPCV |
+| [`Validation/LeakageAwareHPO.ipynb`](Validation/LeakageAwareHPO.ipynb) | **Leakage-aware HPO** through purged CV with a **Deflated-Sharpe gate** |
+
 ## Setup
 
 `RiskLabAI` is pulled from its public repository — no local clone of the library
